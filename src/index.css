@@ -1,0 +1,177 @@
+/* box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* reset margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+
+  overflow-x: hidden;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* make images easier to work with */
+img,
+picutre,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.container {
+  --container-width: 1140px;
+  width: min(90%, var(--container-width));
+  margin-inline: auto;
+  padding-block: 32px;
+  margin-top: 100px;
+}
+
+.header {
+  text-align: center;
+  padding-block: 16px;
+  font-weight: bold;
+  font-size: 48px;
+  border-bottom: 1px solid #ccc;
+}
+
+footer {
+  text-align: center;
+  padding-block: 16px;
+}
+
+.name {
+  border: none;
+}
+
+.name label {
+  margin-right: 16px;
+}
+
+.name input {
+  padding-inline: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.level {
+  margin-top: 32px;
+}
+
+.level h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.buttons {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.buttons button {
+  padding: 16px 8px;
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: inline-block;
+
+
+}
+
+.buttons img {
+  width: 40%;
+  float: right;
+  margin-right: -7.2px;
+
+}
+
+.buttons span {
+  display: flex;
+  margin-top: 25px;
+  margin-left: 30px;
+}
+
+.buttons button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.timer__title {
+  font-weight: bold;
+}
+
+.word-container {
+  margin-top: 32px;
+}
+
+.word-container__title {
+  font-weight: bold;
+}
+
+.word-container__words {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  border-radius: 8px;
+  margin-top: 16px;
+  padding: 16px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+.word-input {
+  display: grid;
+  margin-top: 16px;
+}
+
+.word-input label {
+  font-weight: bold;
+}
+
+.word-input input {
+  width: 50%;
+  margin-top: 16px;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.score {
+  margin-top: 16px;
+}
+
+.button {
+  margin-top: 16px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 4px 24px;
+  font-weight: bold;
+}
